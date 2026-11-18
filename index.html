@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción al torneo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Inscripción al torneo</h1>
+    <p class="intro">Rellena el formulario para participar. Los campos con * son obligatorios.</p>
+
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <div class="campo">
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico *</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="campo">
+          <label for="edad">Edad (mínimo 16 años)</label>
+          <input type="number" id="edad" name="edad" min="16" max="120">
+        </div>
+
+        <div class="campo">
+          <label for="nacimiento">Fecha de nacimiento</label>
+          <input type="date" id="nacimiento" name="nacimiento" max="2010-11-18">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Cuenta de jugador</legend>
+
+        <div class="campo">
+          <label for="nickname">Nombre del jugador (nickname) *</label>
+          <input type="text" id="nickname" name="nickname" minlength="3" maxlength="15" required>
+        </div>
+
+        <div class="campo">
+          <label for="password">Contraseña de la cuenta *</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Torneo</legend>
+
+        <div class="campo">
+          <label for="juego">Videojuego del torneo</label>
+          <select id="juego" name="juego">
+            <option value="">Selecciona un juego</option>
+            <option value="valorant">Valorant</option>
+            <option value="lol">League of Legends</option>
+            <option value="fortnite">Fortnite</option>
+            <option value="fc">EA Sports FC</option>
+            <option value="rocket-league">Rocket League</option>
+          </select>
+        </div>
+
+        <fieldset class="grupo">
+          <legend>Plataforma</legend>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="radio" id="pc" name="plataforma" value="pc">
+              <label for="pc">PC</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" id="playstation" name="plataforma" value="playstation">
+              <label for="playstation">PlayStation</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" id="xbox" name="plataforma" value="xbox">
+              <label for="xbox">Xbox</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+          <legend>Disponibilidad horaria</legend>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="checkbox" id="manana" name="disponibilidad" value="manana">
+              <label for="manana">Mañana</label>
+            </div>
+            <div class="opcion">
+              <input type="checkbox" id="tarde" name="disponibilidad" value="tarde">
+              <label for="tarde">Tarde</label>
+            </div>
+            <div class="opcion">
+              <input type="checkbox" id="noche" name="disponibilidad" value="noche">
+              <label for="noche">Noche</label>
+            </div>
+          </div>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>Información adicional</legend>
+
+        <div class="campo">
+          <label for="comentarios">Comentarios adicionales</label>
+          <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+        </div>
+
+        <div class="opcion">
+          <input type="checkbox" id="normas" name="normas" required>
+          <label for="normas">He leído y acepto las <a href="normas.html">normas del torneo</a> *</label>
+        </div>
+      </fieldset>
+
+      <div class="botones">
+        <button type="submit" class="btn-enviar">Inscribirme</button>
+        <button type="reset" class="btn-limpiar">Limpiar formulario</button>
+      </div>
+
+    </form>
+  </main>
+</body>
+</html>
